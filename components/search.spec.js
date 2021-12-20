@@ -1,4 +1,4 @@
-import Search from '../search';
+import Search from './search';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
