@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "test": "jest",
+    "test": "jest --maxWorkers=50%",
     "test:watch": "jest --watchAll --maxWorkers=50%",
+    "test:coverage": "jest --coverage --maxWorkers=50%",
     "build": "next build",
     "start": "next start"
   },
