@@ -28,16 +28,16 @@ Before starting, you need to have [Git](https://git-scm.com) and [Node](https://
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/curso-javascript-testes-modulo-3
+$ git clone https://github.com/davi1985/module-03
 
 # Access
-$ cd curso-javascript-testes-modulo-3
+$ cd module-03
 
 # Install dependencies
 $ yarn
 
 # Run the project
-$ yarn start
+$ yarn dev
 
 # The server will initialize in the <http://localhost:3000>
 ```
