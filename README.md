@@ -2,7 +2,7 @@
   <img src="./public/img.png" alt="Curso Javascript Testes Modulo 3" />
 </div>
 
-<h1 align="center">Learn how to test Javscript applications - Module 3</h1>
+<h1 align="center">Learn how to test Javascript applications - Module 3</h1>
 <br>
 
 ## About
