@@ -5,6 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest --maxWorkers=50%",
+    "test:unit": "jest --config=jest-unit.config.js --maxWorkers=50%",
+    "test:unit:watch": "jest --watchAll --config=jest-unit.config.js --maxWorkers=50%",
+    "test:integration": "jest --config=jest-integration.config.js --maxWorkers=50%",
+    "test:integration:watch": "jest --watchAll --config=jest-integration.config.js --maxWorkers=50%",
     "test:watch": "jest --watchAll --maxWorkers=50%",
     "test:coverage": "jest --coverage --maxWorkers=50%",
     "build": "next build",
