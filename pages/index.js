@@ -1,10 +1,22 @@
 import ProductCard from '../components/product-card';
 import Search from '../components/search';
+import axios from 'axios';
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [products, setProducts] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    axios
+      .get('/api/products')
+      .then((res) => setProducts(res.data.products))
+      .catch((error) => setError(true));
+  }, []);
+
   return (
-    <main className="my-8">
-      <Search />
+    <main className="my-8" data-testid="product-list">
+      <Search doSearch={() => {}} />
 
       <div className="container mx-auto px-6">
         <h3 className="text-gray-700 text-2xl font-medium">Wrist Watch</h3>
@@ -12,7 +24,9 @@ export default function Home() {
         <span className="mt-3 text-sm text-gray-500">200+ Products</span>
 
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-          <ProductCard />
+          {products.map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
         </div>
       </div>
     </main>
