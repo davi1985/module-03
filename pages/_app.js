@@ -100,8 +100,10 @@ function MyApp({ Component, pageProps }) {
           </nav>
         </div>
       </header>
+
       <Cart />
       <Component {...pageProps} />
+
       <footer className="bg-gray-200">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <a
